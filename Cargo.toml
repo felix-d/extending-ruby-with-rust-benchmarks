@@ -1,0 +1,12 @@
+[package]
+name = "ffi_benchmarks"
+version = "0.1.0"
+authors = ["Felix Descoteaux <flx.descoteaux@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "dylib"]
+
+[dependencies]
+helix = "0.7.5"
+libc = "0.2.44"
