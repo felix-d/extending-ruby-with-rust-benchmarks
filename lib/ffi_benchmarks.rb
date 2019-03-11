@@ -2,6 +2,7 @@ require 'helix_runtime'
 require 'ffi'
 require 'ffi_benchmarks/native'
 require 'benchmark/ips'
+require 'rutie'
 
 module FFIBindings
   extend FFI::Library
@@ -9,6 +10,9 @@ module FFIBindings
   attach_function :ffi_is_blank, [:string], :bool
 end
 
+module RutieBlankInit
+  Rutie.new(:ffi_benchmarks).init 'Init_rutie_blank', __dir__
+end
 
 class String
   def helix_is_blank?
@@ -17,6 +21,10 @@ class String
 
   def ffi_is_blank?
     FFIBindings.ffi_is_blank(self)
+  end
+
+  def rutie_is_blank?
+    RutieBlank.rutie_is_blank(self)
   end
 
   BLANK_RE = /\A[[:space:]]*\z/
@@ -35,6 +43,10 @@ module Bench
 
       bench.report("ffi - blank check") do
         "foo".ffi_is_blank?
+      end
+
+      bench.report("rutie - blank check") do
+        "foo".rutie_is_blank?
       end
 
       bench.report("ruby - blank check") do

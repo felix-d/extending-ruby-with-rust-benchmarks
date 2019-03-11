@@ -9,6 +9,7 @@ version = "0.1.0"
 dependencies = [
  "helix 0.7.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rutie 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -20,6 +21,11 @@ dependencies = [
  "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
  "libcruby-sys 0.7.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
+
+[[package]]
+name = "lazy_static"
+version = "1.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "libc"
@@ -34,8 +40,19 @@ dependencies = [
  "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
+[[package]]
+name = "rutie"
+version = "0.5.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "lazy_static 1.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
 [metadata]
 "checksum cstr-macro 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "db53fddba18cdd35477a7213a3ef6acfbfa333c31b42ce019e544c4a1420a06f"
 "checksum helix 0.7.5 (registry+https://github.com/rust-lang/crates.io-index)" = "49a017e3e798ad9386e0a0584e66fd6c04a80ccc1242eb8f689c62ce6f408240"
+"checksum lazy_static 1.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "bc5729f27f159ddd61f4df6228e827e86643d4d3e7c32183cb30a1c08f604a14"
 "checksum libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)" = "10923947f84a519a45c8fefb7dd1b3e8c08747993381adee176d7a82b4195311"
 "checksum libcruby-sys 0.7.5 (registry+https://github.com/rust-lang/crates.io-index)" = "fef6028cdce0c8d55676fd1d66bb810facef8cade0dd71d28511d375e84da4c0"
+"checksum rutie 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)" = "4f887fac19aa1bccdce27caf31706403f0a9ac0600c813add47d5fd7898abc0a"

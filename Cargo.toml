@@ -10,3 +10,4 @@ crate-type = ["cdylib", "dylib"]
 [dependencies]
 helix = "0.7.5"
 libc = "0.2.44"
+rutie = "0.5.3"
